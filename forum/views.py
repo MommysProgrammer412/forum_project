@@ -15,3 +15,21 @@ def add_post(request):
     else:
         form = PostForm()
     return render(request, 'forum/add_post.html', {'form': form})
+
+def update_post(request, pk):
+    post = Post.objects.get(id=pk)
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = PostForm(instance=post)
+    
+    return render(request, 'forum/update_post.html', {'form': form, 'post': post})
+
+def delete_post(request, pk):
+    post = Post.objects.get(id=pk)
+    post.delete()
+    return redirect('index')  # Перенаправление на страницу со списком постов

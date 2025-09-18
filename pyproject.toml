@@ -8,6 +8,12 @@ package-mode = false
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
 django = "^5.2.6"
+pillow = "^11.3.0"
+psycopg2-binary = "^2.9.10"
+djangorestframework = "^3.16.1"
+django-cors-headers = "^4.8.0"
+django-storages = "^1.14.6"
+boto3 = "^1.40.33"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
