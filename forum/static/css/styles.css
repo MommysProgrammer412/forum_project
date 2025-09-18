@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #282A36;  /* Темный фон */
+    color: #F8F8F2;              /* Светлый текст */
+}
+
+h1, h2 {
+    color: #66D9EF;              /* Цвет заголовков */
+}
+
+div {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #44475A;   /* Светло-черный фон для блоков */
+    border: 1px solid rgba(255, 255, 255, 0.2);  /* Полупрозрачные границы */
+    border-radius: 5px;
+    border: none
+}
+
+a {
+    margin-right: 10px;
+    color: #8BE9FD;               /* Цвет ссылок */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;   
+}
+
+button {
+    background-color: #FF79C6;   /* Цвет кнопок */
+    color: #F8F8F2;               /* Цвет текста кнопок */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF92D3;    /* Светлее цвет кнопки при наведении */
+}
