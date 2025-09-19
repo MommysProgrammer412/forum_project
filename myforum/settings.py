@@ -63,3 +63,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+LOGIN_URL = 'login'  # Это имя маршрута для входа
+LOGOUT_REDIRECT_URL = 'index'  # Укажите на главную страницу после выхода
+LOGIN_REDIRECT_URL = 'index'  # Путь на который будет перенаправлен пользователь после входа

@@ -25,7 +25,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;   
+    text-decoration: underline;
 }
 
 button {
@@ -39,4 +39,50 @@ button {
 
 button:hover {
     background-color: #FF92D3;    /* Светлее цвет кнопки при наведении */
+}
+
+/* Стили для навигационной панели */
+.navbar {
+    background-color: #44475a;
+    padding: 0rem 1rem;
+    min-height: calc(1.5rem + 2px - 60px);
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.navbar-collapse {
+    background-color: #3a3b47;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Отодвинули левую границу блока навбар коллапс на 10 пикселей правее */
+}
+
+.navbar-collapse .nav-link {
+    color: #f8f8f2;
+}
+
+.navbar-collapse .nav-link:hover {
+    color: #66d9ef;
+}
+
+.list-group {
+    width: 100%;
+}
+
+.list-group-item {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    top: -10px; /* Подняли кнопку "Мой Форум" на 5 пикселей выше */
 }

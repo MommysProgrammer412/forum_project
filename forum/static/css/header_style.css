@@ -1,0 +1,42 @@
+.navbar {
+    background-color: #44475A; /* Цвет фона для навбара */
+    min-height: 60px; /* Единая высота для навбара */
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание */
+}
+
+.navbar-collapse {
+    background-color: #3A3B47; /* Цвет фона для коллапса */
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание для кнопок */
+    min-height: 60px; /* Высота должна совпадать с навбаром */
+}
+
+.navbar-collapse .nav-link {
+    color: #f8f8f2;
+    margin: 0 10px; /* Отступы между ссылками */
+    display: flex; /* Добавлено для центрирования текста */
+    align-items: center; /* Центрируем текст по вертикали */
+}
+
+.navbar-collapse .nav-link:hover {
+    color: #66d9ef;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    line-height: 1; /* Устанавливаем нормальную высоту строки */
+    height: 60px; /* Установите конкретное значение высоты, чтобы оно соответствовало навбару */
+}
+
+.navbar .btn-primary {
+    height: auto; /* Позволяем кнопке автоматически менять высоту */
+    min-height: 38px; /* Минимальная высота кнопки "Добавить пост" */
+    line-height: normal; /* Убираем фиксированную высоту строки */
+    display: flex; /* Для надлежащего выравнивания текста */
+    align-items: center; /* Вертикальное выравнивание текста в кнопке */
+    justify-content: center; /* Горизонтальное выравнивание текста в кнопке */
+}
