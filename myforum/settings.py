@@ -67,3 +67,6 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'login'  # Это имя маршрута для входа
 LOGOUT_REDIRECT_URL = 'index'  # Укажите на главную страницу после выхода
 LOGIN_REDIRECT_URL = 'index'  # Путь на который будет перенаправлен пользователь после входа
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

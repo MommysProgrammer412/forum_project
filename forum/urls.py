@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 from .views import index, add_post, update_post, delete_post, register, user_posts, CustomLoginView
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', index, name='index'),
@@ -17,3 +19,6 @@ urlpatterns = [
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='forum/password_reset_complete.html'), name='password_reset_complete'),
     path('user/<int:user_id>/posts/', user_posts, name='user_posts'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

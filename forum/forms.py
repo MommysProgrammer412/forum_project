@@ -6,7 +6,10 @@ from django.contrib.auth.models import User
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title', 'content']
+        fields = ['title', 'content', 'image', 'hashtags']  # Добавляем 'hashtags' сюда
+        widgets = {
+            'hashtags': forms.TextInput(attrs={'placeholder': 'Введите хэштеги (необязательно)', 'class': 'form-control'})
+        }
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(required=True)
