@@ -1,0 +1,40 @@
+<!-- forum/templates/forum/header.html -->
+<nav style="background-color: #282A36;"> <!-- Внешний блок заголовка -->
+    <div class="container">
+        <div class="navbar navbar-expand-lg"> <!-- Убрали дополнительный стиль высоты -->
+            <a class="navbar-brand" href="{% url 'index' %}" style="font-size: 28px; font-weight: bold; color: #66d9ef;">Мой Форум</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'add_post' %}" class="btn btn-primary">Добавить пост</a>
+                        {% endif %}
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <form method="post" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn nav-link" style="background: none; border: none; cursor: pointer;">Выйти</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'user_posts' user.id %}">Мои посты</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Регистрация</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
